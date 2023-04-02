@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../scss/style.scss"
+	],
+	"sourcesContent": [
+		"@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&display=swap');\n\n:root\n{\n  --text-color: white;\n  --theme-color: #3D0202;\n  --theme-color-opacity: rgba(61, 2, 2, 0.74);\n  font-size: 16px;\n  font-family: \"Titillium Web\", sans-serif;\n}\n\n\n.content\n{\n  margin: 1.5rem 25%;\n}\n\n.presentation\n{\n  position: fixed;\n  background-color: var(--theme-color-opacity);\n  width: 20%;\n  height: 100%;\n  top: 0;\n  left: 0;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n\n  .aside-header\n  {\n    text-align: center;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin: 3rem 0;\n\n    img\n    {\n      border-radius: 50%;\n      margin-bottom: 1.5rem;\n    }\n\n    .h-infos\n    {\n      font-size: 2.5rem;\n      font-weight: 700;\n      text-transform: uppercase;\n      max-width: 80%;\n    }\n  }\n\n  .aside-content\n  {\n    display: flex;\n    flex-direction: column;\n    width: 100%;\n    height: 100%;\n    justify-content: space-around;\n    text-align: center;\n    align-items: center;\n  }\n}\n\n\n\n"
+	],
+	"names": [],
+	"mappings": "AAAA,OAAO,CAAC,mGAAI;;AAEZ,AAAA,KAAK,CACL;EACE,YAAY,CAAA,MAAC;EACb,aAAa,CAAA,QAAC;EACd,qBAAqB,CAAA,qBAAC;EACtB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,2BAA2B,GACzC;;;AAGD,AAAA,QAAQ,CACR;EACE,MAAM,EAAE,UAAU,GACnB;;;AAED,AAAA,aAAa,CACb;EACE,QAAQ,EAAE,KAAK;EACf,gBAAgB,EAAE,0BAA0B;EAC5C,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,IAAI;EACZ,GAAG,EAAE,CAAC;EACN,IAAI,EAAE,CAAC;EACP,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM,GAmCpB;;EA7CD,AAYE,aAZW,CAYX,aAAa,CACb;IACE,UAAU,EAAE,MAAM;IAClB,OAAO,EAAE,IAAI;IACb,cAAc,EAAE,MAAM;IACtB,WAAW,EAAE,MAAM;IACnB,MAAM,EAAE,MAAM,GAef;;IAjCH,AAoBI,aApBS,CAYX,aAAa,CAQX,GAAG,CACH;MACE,aAAa,EAAE,GAAG;MAClB,aAAa,EAAE,MAAM,GACtB;;IAxBL,AA0BI,aA1BS,CAYX,aAAa,CAcX,QAAQ,CACR;MACE,SAAS,EAAE,MAAM;MACjB,WAAW,EAAE,GAAG;MAChB,cAAc,EAAE,SAAS;MACzB,SAAS,EAAE,GAAG,GACf;;EAhCL,AAmCE,aAnCW,CAmCX,cAAc,CACd;IACE,OAAO,EAAE,IAAI;IACb,cAAc,EAAE,MAAM;IACtB,KAAK,EAAE,IAAI;IACX,MAAM,EAAE,IAAI;IACZ,eAAe,EAAE,YAAY;IAC7B,UAAU,EAAE,MAAM;IAClB,WAAW,EAAE,MAAM,GACpB"
+}

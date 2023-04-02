@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>CV</title>
+
+        <!-- BALISES META -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Curriculum Vitae">
+        <meta name="robots" content="index, nofollow">
+        <!-- FIN BALISES META -->
+
+        <!-- BALISES STYLE -->
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- FIN BALISES STYLE -->
+
+        <!-- BALISES SCRIPT -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="assets/js/app.js"></script>
+        <!-- FIN BALISES SCRIPT -->
+    </head>
+    <body>
+        <div class="container">
+            <!-- THEME BUTTON -->
+            <div class="theme-button">
+                <i class="fa-solid fa-droplet"></i>
+            </div>
+            <div class="theme-settings">
+            </div>
+            <!-- END THEME BUTTON -->
+
+            <!-- ASIDE PRESENTATION -->
+            <aside class="presentation">
+                <div class="overlay">
+                    <div class="burger-menu">
+                        <span></span>
+                    </div>
+                    <div class="aside-header anim-hidden">
+                        <img src="https://fakeimg.pl/100x100/282828/eae0d0/?retina=1" alt="Nom Prénom">
+                        <div class="h-infos">
+                            <h2>OUNAS Yanis</h2>
+                        </div>
+                    </div>
+                    <div class="aside-content anim-hidden">
+                        <div class="aside-section anim-hidden">
+                            <h3>Contact</h3>
+                            <p><i class="fa-solid fa-at"></i> <a href="mailto:ounas.yanis.gj@gmail.com">ounas.yanis.gj@gmail.com</a></p>
+                            <p><i class="fa-solid fa-mobile-button"></i> 06.24.00.25.52</p>
+                        </div>
+                        <div class="aside-section anim-hidden">
+                            <h3>Véhicule</h3>
+                            <p><i class="fa-solid fa-id-card"></i> Permis: B</p>
+                            <p><i class="fa-solid fa-car"></i> Véhiculé: Oui</p>
+                        </div>
+                        <div class="aside-section anim-hidden">
+                            <h3>Loisirs</h3>
+                            <div class="hobbies">
+                                <div class="hobbies-icons">
+                                    <i class="fa-solid fa-film fa-2x h-icon" id="movies"></i>
+                                    <i class="fa-solid fa-book fa-2x h-icon" id="read"></i>
+                                    <i class="fa-solid fa-person-walking-luggage fa-2x h-icon" id="travel"></i>
+                                    <i class="fa-solid fa-gamepad fa-2x h-icon" id="games"></i>
+                                </div>
+                                <p id="hobbies-text"></p>
+                            </div>
+                        </div>
+                        <div class="aside-section anim-hidden">
+                            <p>&copy; 2022 - OUNAS YANIS</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!-- FIN ASIDE PRESENTATION -->
+
+            <!-- CONTENU PRINCIPAL -->
+            <div class="content">
+                <!-- SECTION DEGREE (Parcours) -->
+                <section class="anim-hidden" id="degree">
+                    <h1 class="section-title">Parcours</h1>
+                    <div class="section-body">
+                        <div class="p-body">
+                            <div class="p-content">
+                                <h3>études</h3>
+                                <ul>
+                                    <li>- 2016: Collège Bracke Desrousseaux à VENDIN LE VIEIL - Brevet des collèges</li>
+                                    <li>- 2019: Lycée Henri DARRAS à LIEVIN - Terminal Bac Professionnel Système Numérique</li>
+                                </ul>
+                            </div>
+                            <div class="p-content">
+                                <h3>formations</h3>
+                                <ul>
+                                    <li>- Actuellement: AFCI LIEVIN Développeur web/Web mobile</li>
+                                </ul>
+                            </div>
+                            <div class="p-content">
+                                <h3>expériences professionnelles</h3>
+                                <ul>
+                                    <li>- 2015: Stage de 3ème: Société LIB & Co HOUPLINES - Maintenance informatique</li>
+                                    <li>- 2017: Stage 1er année Bac Professionnel: Société Générale Energie LENS - électricité générale, pose et maintenance d'alarmes </li>
+                                    <li>- 2018: Stage 1er année Bac Professionnel: Hôpital d'Armentières - Maintenance et prévention incendie</li>
+                                    <li>- 2018: Stage 2ème année Bac Professionnel: SODEXO justice service Centre Pénitentiaire de VENDIN-LE-VIEIL - Service maintenance</li>
+                                    <li>- 2019: Stage 2ème année Bac Professionnel: SODEXO justice service Centre Pénitentiaire de VENDIN-LE-VIEIL - Service maintenance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- FIN SECTION DEGREE (Parcours) -->
+
+                <!-- SECTION SKILLS (Compétences) -->
+                <section class="anim-hidden" id="skills">
+                    <h1 class="section-title">Compétences</h1>
+                    <div class="section-body">
+                        <div class="s-body">
+                            <div class="s-content">
+                                <h2 class="s-title">FrontEnd: <span class="st-score frontend-score">0</span>%</h2>
+                                <div class="icons frontend">
+                                    <i class="s-icon fa-brands fa-html5 fa-3x" id="html5"> </i>
+                                    <i class="s-icon fa-brands fa-css3 fa-3x" id="css3"> </i>
+                                    <i class="s-icon fa-brands fa-js-square fa-3x" id="javascript"> </i>
+                                </div>
+                                <div class="score"><span class="value"></span></div>
+                            </div>
+                            <div class="s-content">
+                                <h2 class="s-title">BackEnd: <span class="st-score backend-score">0</span>%</h2>
+                                <div class="icons backend">
+                                    <i class="s-icon fa-brands fa-php fa-3x" id="php"> </i>
+                                    <i class="s-icon fa-brands fa-symfony fa-3x" id="symfony"> </i>
+                                    <i class="s-icon fa-brands fa-python fa-3x" id="django"> </i>
+                                </div>
+                                <div class="score"><span class="value"></span></div>
+                        </div>
+                        <div class="s-content">
+                            <h2 class="s-title">Applications: <span class="st-score software-score">0</span>%</h2>
+                            <div class="icons software">
+                                <i class="s-icon fa-brands fa-git-alt fa-3x" id="git"> </i>
+                                <i class="s-icon fa-brands fa-github fa-3x" id="github"> </i>
+                                <i class="s-icon fa-brands fa-figma fa-3x" id="figma"> </i>
+                            </div>
+                            <div class="score"><span class="value"></span></div>
+                        </div>
+                        <div class="s-content">
+                            <h2 class="s-title">Système d'exploitation: <span class="st-score os-score">0</span>%</h2>
+                            <div class="icons os">
+                                <i class="s-icon fa-brands fa-linux fa-3x" id="linux"> </i>
+                                <i class="s-icon fa-brands fa-windows fa-3x" id="windows"> </i>
+                                <i class="s-icon fa-brands fa-apple fa-3x" id="macos"> </i>
+                            </div>
+                            <div class="score"><span class="value"></span></div>
+                        </div>
+                        <div class="s-content">
+                            <h2 class="s-title">Autre: <span class="st-score other-score">0</span>%</h2>
+                            <div class="icons other">
+                                <i class="s-icon fa-brands fa-python fa-3x" id="python"> </i>
+                                <i class="s-icon fa-brands fa-c fa-3x" id="c"> </i>
+                                <i class="s-icon fa-brands fa-c fa-3x" id="cpp">++ </i>
+                                <i class="s-icon fa-brands fa-c fa-3x" id="cs"># </i>
+                            </div>
+                            <div class="score"><span class="value"></span></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- FIN SECTION SKILLS (Compétences) -->
+
+                <!-- SECTION PORTFOLIO (Portfolio) -->
+                <section class="anim-hidden" id="portfolio">
+                    <h1 class="section-title">Portfolio</h1>
+                    <div class="section-body">
+                        <div class="w-body">
+                            <div class="w-content">
+                                <div class="w-img">
+                                    <img src="./assets/img/cv.png"  alt="">
+                                </div>
+                                <div class="w-desc">
+                                    <h3 class="w-title">Ce CV (Projet Personnel) - HTML5, CSS3, JS</h3>
+                                    <a href="https://github.com/yanisounas/yanisounas.github.io" class="w-link" target="_blank">Voir le projet</a>
+                                </div>
+                            </div>
+                            <div class="w-content">
+                                <div class="w-img">
+                                    <img src="https://i.gyazo.com/ce6e04187fbf740eb0088dc485f12659.gif"  alt="">
+                                </div>
+                                <div class="w-desc">
+                                    <h3 class="w-title">Immo'Créa Luxe (Projet AFCI en Groupe) - HTML5, CSS3, JS </h3>
+                                    <a href="https://github.com/Greyback4real/ImmoCreaLuxe" class="w-link" target="_blank">Voir le projet</a>
+                                </div>
+                            </div>
+                            <div class="w-content">
+                                <div class="w-img">
+                                    <img src="./assets/img/dofus.png"  alt="">
+                                </div>
+                                <div class="w-desc">
+                                    <h3 class="w-title">Dofus Bootstrap (Projet AFCI Seul) - HTML5, CSS3, JS, PHP, Bootstrap</h3>
+                                    <a href="" class="w-link" onclick="alert('Projet indisponible sur github')">Voir le projet</a>
+                                </div>
+                            </div>
+                            <div class="w-content">
+                                <div class="w-img">
+                                    <img src="./assets/img/db_manager_py.png"  alt="">
+                                </div>
+                                <div class="w-desc">
+                                    <h3 class="w-title">Database Manager (Projet Personel En cours) - Python</h3>
+                                    <a href="" class="w-link" onclick="alert('Projet indisponible sur github')">Voir le projet</a>
+                                </div>
+                            </div>
+                            <div class="w-content">
+                                <div class="w-img">
+                                    <img src="./assets/img/db_manager_php.png"  alt="">
+                                </div>
+                                <div class="w-desc">
+                                    <h3 class="w-title">Database Manager (Projet Personel En cours) - PHP</h3>
+                                    <a href="" class="w-link" onclick="alert('Projet indisponible sur github')">Voir le projet</a>
+                                </div>
+                            </div>
+                            <div class="w-content">
+                                <div class="w-img">
+                                    <img src="./assets/img/game.png"  alt="">
+                                </div>
+                                <div class="w-desc">
+                                    <h3 class="w-title">Petit Jeu CLI (Projet Personel En cours) - Python</h3>
+                                    <a href="https://github.com/yanisounas/pGame" class="w-link" target="_blank">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- FIN SECTION PORTFOLIO (Portfolio) -->
+
+            </div>
+            <!-- FIN CONTENU PRINCIPAL -->
+        </div>
+    </body>
+</html>

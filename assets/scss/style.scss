@@ -1,0 +1,722 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&display=swap');
+
+:root
+{
+  font-size: 16px;
+  font-family: "Titillium Web", sans-serif;
+  color: var(--text-color);
+
+}
+
+.theme-button
+{
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(109, 109, 109, 0.65);
+  top: 10%;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
+  color: white;
+  cursor: pointer;
+  z-index: 50;
+
+}
+.theme-settings
+{
+
+  position: fixed;
+  width: 100px;
+  background-color: rgba(109, 109, 109, 0.65);
+  top: 8%;
+  right: 50px;
+  border-radius: 25%;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  padding: 10px 10px;
+  transform: translateX(20px);
+  opacity: 0;
+  transition: 1s cubic-bezier(.48,-0.17,.16,1.52);
+  z-index: -1;
+
+  .theme
+  {
+    cursor: pointer;
+    border-radius: 25%;
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    z-index: 20;
+  }
+}
+.show
+{
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 50;
+
+}
+
+.anim-hidden
+{
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.anim-show
+{
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1s cubic-bezier(.48,-0.17,.16,1.52);
+}
+
+
+/* PARTIE PRESENTATION (ASIDE) */
+.presentation
+{
+  position: fixed;
+  color: var(--text-theme-color);
+  width: 20%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index:50;
+  transition: 1s ease;
+
+  &::after
+  {
+    position: absolute;
+    content: '';
+    background: url(../img/aside_bg.jpg) no-repeat top center/cover;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    opacity: .3;
+  }
+
+  .overlay
+  {
+    background-color: var(--theme-color-opacity);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .burger-menu
+    {
+      cursor: pointer;
+      display: none;
+      width: 50px;
+      height: 50px;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+
+      span
+      {
+        position: absolute;
+        width: 50%;
+        height: 2px;
+        top: 50%;
+        left: 25%;
+        background-color: white;
+
+        &::before
+        {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          transform: translateY(-10px);
+          background-color: white;
+          animation-name: topLineReverse;
+          animation-duration: .6s;
+          animation-fill-mode: forwards;
+        }
+
+        &::after
+        {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          transform: translateY(10px);
+          background-color: white;
+          animation-name: bottomLineReverse;
+          animation-duration: .6s;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+
+    .b-active
+    {
+      span
+      {
+        background-color: rgba(0,0,0,0);
+        transition: background-color .5s ease;
+
+        &::before
+        {
+          animation-name: topLine;
+          animation-duration: .6s;
+          animation-fill-mode: forwards;
+        }
+
+
+        &::after
+        {
+          animation-name: bottomLine;
+          animation-duration: .6s;
+          animation-fill-mode: forwards;
+        }
+      }
+
+    }
+    @keyframes bottomLineReverse
+    {
+      from
+      {
+        transform: translateY(0) rotate(45deg);
+      }
+      50%
+      {
+        transform: translateY(0) rotate(0);
+      }
+      to
+      {
+        transform: translateY(10px);
+      }
+    }
+
+    @keyframes topLineReverse
+    {
+      from
+      {
+        transform: translateY(0) rotate(-45deg);
+      }
+      50%
+      {
+        transform: translateY(0) rotate(0);
+      }
+      to
+      {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes bottomLine
+    {
+      from
+      {
+        transform: translateY(10px);
+      }
+      50%
+      {
+        transform: translateY(0);
+      }
+      to
+      {
+        transform: translateY(0) rotate(45deg);
+      }
+    }
+
+    @keyframes topLine
+    {
+      from
+      {
+        transform: translateY(-10px);
+      }
+      50%
+      {
+        transform: translateY(0);
+      }
+      to
+      {
+        transform: translateY(0) rotate(-45deg);
+      }
+    }
+
+    .aside-header
+    {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 3rem 0;
+
+
+      img
+      {
+        border-radius: 50%;
+        margin-bottom: 1.5rem;
+      }
+
+      .h-infos
+      {
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        max-width: 80%;
+      }
+    }
+
+    .aside-content
+    {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      justify-content: space-around;
+      text-align: center;
+      align-items: center;
+
+      .aside-section
+      {
+        h3
+        {
+          font-size: 2rem;
+          font-weight: 700;
+        }
+
+        p
+        {
+          margin: 1rem 0;
+          font-size: 1.2rem;
+          a
+          {
+            color: inherit;
+            margin-left: 5px;
+          }
+        }
+
+        .hobbies
+        {
+          .hobbies-icons
+          {
+            margin: 1rem 0;
+
+            i
+            {
+              cursor: pointer;
+              margin: 0 1rem;
+              transition: 1s all;
+            }
+
+            .active
+            {
+              transform: scale(1.4);
+              position: relative;
+            }
+          }
+          #hobbies-text
+          {
+            width: 100%;
+            height: 1px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/* FIN PARTIE PRESENTATION (ASIDE) */
+
+
+
+/* PARTIE CONTENU PRINCIPAL */
+.content
+{
+  margin: 1.5rem 25%;
+  width: 75%;
+  height: 100vh;
+
+  /* PARTIE SECTION */
+  section
+  {
+    width: 100%;
+    margin-bottom: 15rem;
+
+    .section-title
+    {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+    .section-body
+    {
+      margin: 2rem 0;
+      width: 100%;
+    }
+  }
+  /* FIN PARTIE SECTION */
+
+
+  /* PARTIE DEGREE */
+  #degree
+  {
+    .section-body
+    {
+      .p-body
+      {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        .p-content
+        {
+          text-align: center;
+
+          h3
+          {
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--theme-color);
+          }
+
+          ul
+          {
+            font-size: 1.5rem;
+
+            li
+            {
+              margin: 1rem 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* FIN PARTIE DEGREE */
+
+
+  /* PARTIE COMPETENCES */
+  #skills
+  {
+    .s-body
+    {
+      display: flex;
+      flex-flow: row wrap;
+
+      .s-content
+      {
+        width: 50%;
+        margin-bottom: 2rem;
+
+        .s-title
+        {
+          font-size: 2rem;
+          font-weight: 600;
+          color: var(--theme-color);
+        }
+
+
+        .icons
+        {
+          margin: 1rem 2rem;
+          display: flex;
+
+          .s-icon
+          {
+            margin: 0 1rem;
+            color: var(--theme-color);
+            cursor: pointer;
+            transition: 1s;
+          }
+        }
+
+
+        .score
+        {
+          background-color: var(--theme-color);;
+          width: 80%;
+          height: 2rem;
+          position: relative;
+          z-index: 2;
+          display: flex;
+          align-items: center;
+
+          &::before
+          {
+            content: '';
+            position: absolute;
+            width: 2rem;
+            height: 100%;
+            background-color: var(--theme-color);
+            border-radius: 50%;
+            left: -15px;
+          }
+          &::after
+          {
+            content: '';
+            position: absolute;
+            width: 2rem;
+            height: 100%;
+            background-color: var(--theme-color);
+            border-radius: 50%;
+            right: -15px;
+          }
+
+          .value
+          {
+            margin-left: .5rem;
+            height: 80%;
+            width: 0;
+            background-color: white;
+            z-index: 3;
+            position: relative;
+            transition: width 1.3s cubic-bezier(1,0,.15,.98);
+
+            &::before
+            {
+              content: '';
+              position: absolute;
+              width: 1.8rem;
+              height: 100%;
+              background-color: white;
+              border-radius: 50%;
+              left: -15px;
+            }
+            &::after
+            {
+              content: '';
+              position: absolute;
+              width: 2rem;
+              height: 100%;
+              background-color: white;
+              border-radius: 50%;
+              right: -15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* FIN PARTIE COMPETENCES */
+
+  /* PARTIE PORTFOLIO */
+  #portfolio
+  {
+    .w-body
+    {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+
+      .w-content
+      {
+        max-width: 40%;
+        height: 90%;
+        margin: 2rem 3rem;
+        position: relative;
+        transition: 1s;
+
+        .w-img
+        {
+          overflow: hidden;
+          img
+          {
+            width: 100%;
+            height: 70%;
+            transition: .3s;
+          }
+        }
+
+        .w-desc
+        {
+          margin-top: 1rem;
+          font-size: 1rem;
+          display: flex;
+          justify-content:space-between;
+
+          .w-title
+          {
+          }
+
+          .w-link
+          {
+            color: var(--theme-color);
+            position: relative;
+
+            &::after, &::before
+            {
+              content:'';
+              position: absolute;
+              width: 10%;
+              border-bottom: 2px solid var(--theme-color);
+              bottom: -10%;
+              left:0;
+              transition: 1s cubic-bezier(1,0,.15,.98);
+            }
+            &::before
+            {
+              transform: scaleX(0);
+              transform-origin: left;
+              transition-delay: 0s;
+            }
+
+            &::after
+            {
+              transform-origin: right;
+              transition-delay: .3s;
+            }
+
+            &:hover
+            {
+              &::before
+              {
+                transform: scaleX(1);
+                width: 100%;
+                transition-delay: .3s;
+              }
+
+              &::after
+              {
+                width: 100%;
+                transform: scaleX(0);
+                transition-delay: 0s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /* FIN PARTIE PORTFOLIO */
+}
+/* FIN PARTIE CONTENU PRINCIPAL */
+
+
+@media screen and (max-width: 1655px)
+{
+    :root {font-size: 13px;}
+}
+
+@media screen and (max-width: 1340px)
+{
+  :root {font-size: 9px;}
+
+  .content
+  {
+    .score
+    {
+      &::before
+      {
+        left: -10px !important;
+      }
+
+      &::after
+      {
+        right: -10px !important;
+      }
+      .value
+      {
+        &::before
+        {
+          left: -10px !important;
+        }
+
+        &::after
+        {
+          right: -10px !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1040px)
+{
+  .presentation {width: 15%;}
+
+  .pres-show{width: 100%;}
+
+  .overlay
+  {
+    .aside-header{display: none !important;}
+    .aside-content{display: none !important;}
+    .burger-menu{display:flex !important;}
+    .aside-h-show {display: flex !important;}
+    .aside-c-show {display: flex !important;}
+  }
+}
+
+@media screen and (max-width: 720px)
+{
+  :root {font-size: 7px;}
+  #portfolio
+  {
+    .w-body
+    {
+      flex-flow: column nowrap !important;
+
+      .w-content
+      {
+        max-width: 100% !important;
+      }
+    }
+  }
+
+  #skills
+  {
+    .s-body
+    {
+      flex-flow: column nowrap !important;
+      justify-content: center;
+      align-items: center;
+      .s-content
+      {
+        margin-bottom:5rem !important;
+
+        .icons
+        {
+          margin: 1rem 0 !important;
+          .s-icon
+          {
+            margin: 0 .5rem !important;
+          }
+        }
+
+        .score
+        {
+          &::before
+          {
+            left: -7px !important;
+          }
+
+          &::after
+          {
+            right: -7px !important;
+          }
+          .value
+          {
+            &::before
+            {
+              left: -7px !important;
+            }
+
+            &::after
+            {
+              right: -7px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+  * TODO: responsive:
+  * TODO: - aside: Réparer les bugs quand on passe de taille normale à taille burger (la classe anim-show ne s'enlève pas correctement)
+  *
+ */
