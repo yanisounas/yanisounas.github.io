@@ -47,29 +47,31 @@ $(document).ready(function()
     const skills = {
         frontend: {
             html5: 90,
-            css3: 70,
-            javascript: 40
+            css3: 80,
+            javascript: 60
         },
         backend: {
-            php: 70,
-            symfony: 30,
-            django: 20
+            php: 90,
+            symfony: 60,
+            django: 40,
+            javascript: 50,
         },
         software: {
-            git: 50,
+            git: 60,
             github: 60,
             figma: 30
         },
         os: {
-            linux: 70,
+            linux: 80,
             windows: 80,
-            macos: 70
+            macos: 80
         },
         other: {
             python: 70,
-            c: 20,
-            cpp: 30,
-            cs: 50
+            c: 40,
+            cpp: 50,
+            cs: 50,
+            golang: 30,
         }
 
     };
@@ -246,7 +248,7 @@ $(document).ready(function()
 
     $(".burger-menu").click(function() {
         $(this).toggleClass("b-active");
-        
+
         $(".presentation").toggleClass("pres-show");
 
         let a_header = $(".aside-header");
@@ -264,4 +266,3 @@ $(document).ready(function()
     });
 
 });
-
