@@ -59,7 +59,7 @@ $(document).ready(function()
         software: {
             git: 60,
             github: 60,
-            figma: 30
+            figma: 50
         },
         os: {
             linux: 80,
