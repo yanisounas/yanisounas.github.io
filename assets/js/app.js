@@ -46,15 +46,15 @@ $(document).ready(function()
 
     const skills = {
         frontend: {
-            html5: 90,
+            html5: 100,
             css3: 80,
             javascript: 60
         },
         backend: {
-            php: 90,
-            symfony: 60,
+            php: 75,
+            symfony: 55,
             django: 40,
-            javascript: 50,
+            javascript: 45,
         },
         software: {
             git: 60,
